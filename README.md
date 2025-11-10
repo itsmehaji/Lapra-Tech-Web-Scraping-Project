@@ -1,84 +1,85 @@
-# GEM Bid Scraper & Preprocessor
-
-A tiny, focused toolchain to pull bid data from GeM (Government e‑Marketplace), save tidy CSVs, download Bid/RA PDFs, then clean and compare the results—all with a one‑click Streamlit UI or simple CLI.
-
----
-
-## ✨ What you get
-- Automated scrape by State/City (or ALL)
-- CSV exports in `Data/` with timestamped names
-- Bid and RA PDFs organized under `RAs/<STATE>/<CITY>/`
-- Quick cleaning (dedupe by Bid No, friendlier dates) into `cleaned data/`
-- Side‑by‑side comparison of raw vs cleaned
-- Optional web app for a guided, friendly flow
+# 📊 GEM Bid Scraper & Preprocessor  
+*A simple and efficient toolkit to extract and clean bid data from the Government e-Marketplace (GeM).*
 
 ---
 
-## 🧭 Project structure (at a glance)
-- `scraper.py` — Headless Chrome + API workflow, saves CSVs, downloads PDFs
-- `preprocessor.py` — Cleans the CSV (de‑dupe, date touch‑ups)
-- `compare_data.py` — Prints raw vs cleaned stats
-- `web_app.py` — Streamlit UI to run scrape → preprocess → analyze
-- `Data/` — Raw CSV outputs (timestamped)
-- `cleaned data/` — Cleaned CSV outputs (timestamped)
-- `RAs/` — RA and Bid PDFs organized by State/City
+## ✨ Overview  
+This project automates the process of collecting bid details from the GeM portal and neatly organizes the data for analysis.  
+No more manual downloads or messy spreadsheets — everything is structured and ready to use.
 
 ---
 
-## ⚙️ Setup (Windows PowerShell)
-1) Create a virtual env and install deps:
+## ✅ Prerequisites  
+Make sure the following are available on your system before running the project:
 
-```powershell
+| Requirement | Description |
+|------------|-------------|
+| 🐍 Python (Latest Version) | Ensure Python is installed and added to PATH |
+| 🌐 Google Chrome Installed | Used for automated browsing and PDF handling |
+| 📶 Stable Internet Connection | Required for fetching data from GeM website |
+
+---
+
+## ✅ Features  
+- Scrape bid data by **State / City** or scrape **all** available data  
+- Save raw data in `Data/` with timestamped filenames  
+- Download and arrange Bid/RA PDFs in `RAs/<STATE>/<CITY>/`  
+- Clean and preprocess CSVs into `cleaned data/`  
+- Compare raw vs cleaned datasets using `compare_data.py`  
+- Optional **Streamlit** UI for an intuitive, click-based workflow
+
+---
+
+## 📂 Project Structure  
+- scraper.py → Scrapes bid data and downloads PDFs
+- preprocessor.py → Cleans and formats the raw CSV files
+- compare_data.py → Summarizes differences between raw and cleaned data
+- web_app.py → Streamlit UI for scraping and preprocessing
+- Data/ → Raw CSV outputs
+- cleaned data/ → Cleaned and deduplicated CSV outputs
+- RAs/ → Organized folder of downloaded PDFs
+
+---
+
+## ⚙️ Installation  
+```bash
 pip install -r requirements.txt
 ```
 
-2) Ensure Google Chrome is installed (the driver is auto‑managed).
-
----
-
-## 🚀 Quick start
-### Run the web app
-```powershell
+## 🚀 How to Use
+Run the Streamlit Web App:
+```
 streamlit run web_app.py
 ```
-Then pick your State/City and follow the buttons: Scrape → Preprocess → Analyze.
+Select State / City
 
-Outputs land here:
-- Raw CSV: `Data/bids_<STATE>_<CITY>_<TIMESTAMP>.csv`
-- Cleaned CSV: `cleaned data/bids_..._cleaned.csv`
-- PDFs: `RAs/<STATE>/<CITY>/*.pdf`
+Click → Scrape
 
----
+Click → Preprocess
 
-## 📝 Notes & tips
-- If GeM’s API blocks state/city lists, the scraper may prompt you to select them in the opened browser, then press Enter to continue.
-- RA PDFs first download to your system `Downloads` and are then moved to `RAs/...` automatically.
-- Filenames are sanitized (Windows‑safe) and timestamped to avoid clashes.
+Click → Analyze
 
----
+Processed files will appear in the corresponding directories.
 
-## 🧩 Troubleshooting
-- "streamlit" not found → activate your venv and `pip install -r requirements.txt`.
-- Chrome/driver issues → update Chrome; the driver is handled by `webdriver-manager`.
-- Empty CSV → try running with a specific State/City, or re‑run later if GeM throttles.
+##💡 Tips
+# If GeM limits API access, the scraper may switch to browser mode — select State/City manually and press Enter.
 
----
+- PDFs first download to your Downloads folder and are then automatically moved to RAs/.
 
-Made with care for clarity and repeatability. If you need tweaks (extra columns, filters, or exports), you’re a small edit away in `scraper.py` and friends.
+## 🔧 Troubleshooting
+# Issue	Solution
+- streamlit command not found	Re-activate environment & run pip install -r requirements.txt
+- Chrome/Driver mismatch errors	Update Chrome; webdriver-manager handles the driver
+- CSV output is empty	Try filtering by State/City; GeM may be throttling bulk scraping
 
----
+## 🤝 Contributions
+- Fork the repo
+- Improve or optimize scripts
+- Submit Issues or PRs
 
-## ⭐ Like this project?
+## ⭐ Star the repo if this helped you!
 
-If this tool saved you time, please consider:
+## 🛠️ Built For
+# Automation • Procurement Analytics • Data Extraction • Quick Workflows
 
-- Starring the repo to show support
-- Sharing it with a teammate
-- Opening an issue for ideas or bugs
-- Sending a PR with improvements
-
-Your support helps keep it maintained and improving. Thanks!
-
-
-
-
+Happy Scraping! 🚀
