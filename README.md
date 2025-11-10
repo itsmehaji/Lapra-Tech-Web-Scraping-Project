@@ -45,11 +45,6 @@ streamlit run web_app.py
 ```
 Then pick your State/City and follow the buttons: Scrape → Preprocess → Analyze.
 
-### Option B — Command line
-- Scrape everything (ALL states/cities):
-```powershell
-python scraper.py
-```
 - Scrape a specific State (and optional City):
 ```powershell
 python scraper.py --state "TELANGANA" --city "HYDERABAD"
@@ -90,3 +85,4 @@ If this tool saved you time, please consider:
 - Sending a PR with improvements
 
 Your support helps keep it maintained and improving. Thanks!
+
