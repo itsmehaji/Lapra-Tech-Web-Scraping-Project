@@ -29,8 +29,6 @@ A tiny, focused toolchain to pull bid data from GeM (Government e‑Marketplace)
 1) Create a virtual env and install deps:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate
 pip install -r requirements.txt
 ```
 
@@ -80,5 +78,6 @@ If this tool saved you time, please consider:
 - Sending a PR with improvements
 
 Your support helps keep it maintained and improving. Thanks!
+
 
 
