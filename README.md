@@ -61,7 +61,7 @@ Click → Analyze
 
 Processed files will appear in the corresponding directories.
 
-##💡 Tips
+## 💡 Tips
 # If GeM limits API access, the scraper may switch to browser mode — select State/City manually and press Enter.
 
 - PDFs first download to your Downloads folder and are then automatically moved to RAs/.
@@ -80,6 +80,7 @@ Processed files will appear in the corresponding directories.
 ## ⭐ Star the repo if this helped you!
 
 ## 🛠️ Built For
-# Automation • Procurement Analytics • Data Extraction • Quick Workflows
+- Automation • Procurement Analytics • Data Extraction • Quick Workflows
 
 Happy Scraping! 🚀
+
