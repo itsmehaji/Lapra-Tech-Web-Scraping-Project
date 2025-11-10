@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ---
 
 ## 🚀 Quick start
-### Option A — Run the web app
+### Run the web app
 ```powershell
 streamlit run web_app.py
 ```
@@ -78,6 +78,7 @@ If this tool saved you time, please consider:
 - Sending a PR with improvements
 
 Your support helps keep it maintained and improving. Thanks!
+
 
 
 
